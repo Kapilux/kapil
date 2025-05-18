@@ -148,7 +148,7 @@ ul li{line-height:1.8rem; padding: 0 0 .5rem 0;}
    background: #fff;
   padding: 10.hero .cta-buttons .btn.btn-primary:hoverpx 0;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 998;
 }
 
 .header .header-container {
