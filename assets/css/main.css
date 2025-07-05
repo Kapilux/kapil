@@ -18,7 +18,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0C1957; /* Color for headings, subheadings and title throughout the website */
@@ -154,7 +154,7 @@ ul li{line-height:1.8rem; padding: 0 0 .5rem 0;}
 .header .header-container {
   background: #fff;
   padding: 5px 25px;
-  
+
 }
 
 .header .logo {
@@ -740,7 +740,7 @@ section,
   font-weight: 500;
   border-radius: 8px;
   transition: all 0.3s ease;
-  
+
 }
 
 .hero .cta-buttons .btn.btn-primary {
@@ -918,7 +918,7 @@ box-shadow: 4px 6px #000;
 }
 
 .about .personal-info {
-  margin-top: 2rem;
+  
   padding: 2rem;
   background-color: #cfe2fe;
   border-radius: 8px;
@@ -1178,7 +1178,7 @@ box-shadow: 4px 6px #000;
 .portfolio .portfolio-filters li.filter-active {
   background-color: #003dff;
   color: var(--contrast-color);
-  
+
 }
 
 .portfolio .portfolio-card {
