@@ -40,12 +40,12 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #DCEAFE;
+  --background-color: #e7f7fb;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #0d6efd;
+  --background-color: #144b9d;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #032139;
@@ -698,16 +698,33 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 80px 0;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
 
-.hero .content h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+
+.hero .hero-title {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero .hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.hero .hero-description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 550px;
 }
 
 @media (max-width: 991px) {
@@ -744,14 +761,14 @@ section,
 }
 
 .hero .cta-buttons .btn.btn-primary {
-  background-color: #003dff;
+  background-color: #00e9ff;
   border-color: var(--accent-color);
-  color: var(--contrast-color);
-box-shadow: 4px 6px #000;
+  color: var(--accent-color);
+  box-shadow: 4px 6px #000;
 }
 
 .hero .cta-buttons .btn.btn-primary:hover {
-  background-color: #ffff00;
+  background-color: #fff;
   transform: translateY(4px);
   box-shadow:0px 0px;
   color:#000;
@@ -765,7 +782,7 @@ box-shadow: 4px 6px #000;
 }
 
 .hero .cta-buttons .btn.btn-outline:hover {
-  background-color: #003dff;
+  background-color: #144b9d;
   color: var(--contrast-color);
   transform: translateY(4px);
   box-shadow: 0px 0px ;
@@ -918,7 +935,7 @@ box-shadow: 4px 6px #000;
 }
 
 .about .personal-info {
-  
+
   padding: 2rem;
   background-color: #cfe2fe;
   border-radius: 8px;
@@ -966,7 +983,7 @@ box-shadow: 4px 6px #000;
 # Skills Section
 --------------------------------------------------------------*/
 .skills .skill-box {
-  background-color: #ffff00;
+  background-color: #e7f7fb;
   padding: 2rem;
   border-radius: 8px;
   color: #000;
@@ -1176,7 +1193,7 @@ box-shadow: 4px 6px #000;
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background-color: #003dff;
+  background-color: #144b9d;
   color: var(--contrast-color);
 
 }
@@ -1626,7 +1643,7 @@ box-shadow: 4px 6px #000;
 }
 
 .contact .contact-form {
-  background-color: #ffff00;
+  background-color: #00e9ff;
   border: 2px solid #000;
   box-shadow: 4px 4px rgba(0, 0, 0, 1);
   border-radius: 12px;
