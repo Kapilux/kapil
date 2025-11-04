@@ -816,7 +816,7 @@ transition: transform 0.6s ease-in-out;
 .bento-grid {
            display: grid;
            grid-template-columns: repeat(12, 1fr);
-           gap: 20px;
+           gap: 40px;
            animation: fadeIn 1s ease;
        }
 
