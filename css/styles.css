@@ -676,6 +676,43 @@ hr {
     }
 }
 
+/* Compare UI */
+.img-comp-container {
+  position: relative;
+  height: 651px; /*should be the same height as the images*/
+    border-radius: 10px;
+      width: 741px;
+      overflow: hidden;
+      border: 8px solid #8b5cf6;
+
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color:#8b5cf6;
+  border-radius: 50%;
+}
+
+
 /* Featured Work */
 .featured-work {
     padding: 100px 0;
@@ -816,7 +853,7 @@ transition: transform 0.6s ease-in-out;
 .bento-grid {
            display: grid;
            grid-template-columns: repeat(12, 1fr);
-           gap: 40px;
+           gap: 20px;
            animation: fadeIn 1s ease;
        }
 
