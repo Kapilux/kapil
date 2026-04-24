@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZDQMYZQPW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0ZDQMYZQPW');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Designer Portfolio - Kapil Kumar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/remixicon.css" />
+    <script>
+function initComparisons() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /*get the width and height of the img element*/
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+    img.style.width = (w / 2) + "px";
+    /*create slider:*/
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /*insert slider*/
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /*execute a function when the mouse button is pressed:*/
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+    slider.addEventListener("touchstart", slideReady);
+    /*and released (for touch screens:*/
+    window.addEventListener("touchend", slideFinish);
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+      pos = getCursorPos(e)
+      /*prevent the slider from being positioned outside the image:*/
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = (e.changedTouches) ? e.changedTouches[0] : e;
+      /*get the x positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+</head>
+
+  <body>
+      <!-- Header -->
+      <header class="header">
+          <nav class="container">
+              <div class="nav">
+
+                  <ul class="nav-links">
+                    <li><a href="index.html#work">&#8592; Portfolio</a> / Work / Electronic Health Record Application</li>
+
+                  </ul>
+                  <div class="nav-actions">
+                    <a href="index.html#work" class="btn btn-secondary">View My Work</a>
+                      <a href="index.html#contact" class="btn btn-primary">Contact</a>
+                  </div>
+              </div>
+          </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="work-hero">
+          <div class="container">
+            <div class="work-tags">
+                <span class="tag">Planning  &amp; Strategy</span>
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Product Design</span>
+                <span class="tag">VMS</span>
+                <span class="tag">SaaS</span>
+                <span class="tag">Dashboard</span>
+            </div>
+              <div class="title-section">
+                  <h1>Electronic Health Record Application</h1>
+                  <p class="description">Total contingent workforce staffing and management solutions resulted in <b class="work-line">44%</b> reduction in turn around time.</p>
+</div>
+
+                  <div class="">
+                    <div class="image-container">
+                      <img src="img/ehr-main.jpg" class="full-width-image" alt="" loading="lazy">
+                    </div>
+                  </div>
+              </div>
+
+          </div>
+
+
+      </section>
+
+      <!-- Hero Image -->
+
+
+
+
+
+      <!-- About Section -->
+      <section id="about" class="about">
+          <div class="container reveal">
+            <div class="project-overview">
+            <h2 class="overview-title">Project Overview</h2>
+
+
+            <div class="overview-content">
+              <div class="overview-item">
+                <h3>My role: <b class="work-line">Sr. UX Designer</b> </h3>
+                    <p class="overview-description">
+                      This project involved designing a healthcare application for Arab Health. The goal was to create a bilingual (English/Arabic) patient-facing experience that consolidates medical records such as encounters, lab results, medications, and documents.
+                      The work was delivered in collaboration with Malaffi and Orion Health, using an agile, iterative design approach with weekly reviews via AxureRP.
+                  <p class="overview-description">
+                    <h3>Challenges</h3>
+                    Simplify a complex healthcare system without losing functionality, while supporting two languages with fundamentally different text directions (LTR & RTL),
+                    and delivering a demo-ready prototype in a compressed timeline.</p>
+
+
+                  </div>
+                  <div class="overview-item">
+                    <h3>Duration</h3>
+                  <ul class="team-list">
+                    <li>3 Months</li>
+                  </ul>
+                    <h3>Collaboration</h3>
+                  <ul class="team-list">
+                    <li>Business Stakeholders</li>
+                    <li>Project Manager</li>
+                    <li>Project Manager</li>
+                    </ul>
+                  <h3>Tools</h3>
+                <ul class="team-list">
+                  <li>Figma</li>
+                  <li>Axure RP</li>
+                  <li>Trello</li>
+                  </ul>
+
+                  </div>
+
+            </div>
+
+
+        </div>
+          </div>
+      </section>
+
+          <!-- Discovery -->
+            <div class="wave"></div>
+                <section class="experience light-bg">
+                    <div class="container reveal">
+                        <h2 class="section-title text-left">Research &amp; Discovery</h2>
+
+  <div class="overview-content">
+
+                        <div class="overview-item">
+                                          <h3> Objective</h3>
+                                            <p class="overview-description">
+                                              We started with collaborative discovery to understand project constraints, clinical workflows, and technical requirements.
+                                          </p>
+
+                                          <p class="overview-description"></p>
+
+                                            <h3> Stakeholder Alignment</h3>
+                                          <p class="overview-description">
+                                            Conducted workshops with Malaffi to align on business goals, technical constraints, bilingual requirements, and demo success criteria.
+                                            <ul class="team-list">
+                                            <li>Stakeholder alignment with Malaffi</li>
+                                            <li>Defined scope for Arab Health </li>
+                                            <li>Reviewed technical constraints</li>
+                                            <li>Identified bilingual requirement (English + Arabic)</li>
+                                            </ul>
+                                            </p>
+                                            </div>
+
+
+                  </div>
+                </div>
+                      </div>
+                    </section>
+
+
+
+                    <!-- Skills Section -->
+                    <section id="Problems" class="skills">
+
+                        <div class="container reveal">
+                            <h2 class="section-title">User Needs &amp; Pain Points</h2>
+                            <p class="section-subtitle">Based on content audit and stakeholder interviews, we identified core user needs and opportunities for improvement.</p>
+                            <div class="impact-stats">
+                                <div class="skill-category">
+                                    <div class="skill-icon"><i class="ri-loop-left-line ri-2x"></i></div>
+                                    <h3 class="skill-title">High Cognitive Load</h3>
+                                    <p>Complex medical data without visual hierarchy makes it difficult to identify priorities and find information quickly.</p>
+                                </div>
+                                <div class="skill-category">
+                                  <div class="skill-icon"><i class="ri-draft-line ri-2x"></i></div>
+                                    <h3 class="skill-title">Unclear Navigation</h3>
+                                    <p>Fragmented workflows cause users to struggle finding specific records and lose focus during multi-step tasks.</p>
+                                </div>
+
+                                <div class="skill-category">
+                                  <div class="skill-icon"><i class="ri-file-damage-line ri-2x"></i></div>
+                                  <h3 class="skill-title">Jargon-Heavy Language</h3>
+                                <p>Medical terminology reduces user confidence and creates uncertainty about health information accuracy.</p>
+                                    </div>
+                                    <div class="skill-category">
+                                      <div class="skill-icon"><i class="ri-loop-left-line ri-2x"></i></div>
+                                      <h3 class="skill-title">No Bilingual Support</h3>
+                                    <p>Lack of Arabic option creates accessibility barriers for multilingual users and limits market reach.</p>
+                                        </div>
+                                        </div>
+
+                                        <div class="two-col content-left" style="padding:4em 0;">
+                                          <div>
+                                            <h3>What Users Need:</h3>
+                        <ul>
+                            <li>Quick, easy access to medical history without cognitive overload</li>
+                              <li>Clear, non-technical language that builds confidence and trust</li>
+                              <li>Seamless navigation between different medical record sections </li>
+                              <li>Transparent language switching between English and Arabic</li>
+                          </ul>
+                            </div>
+
+                          <div>
+                            <h3>Key Insights:</h3>
+                             <ul>
+                                <li>Content accuracy and simplification of medical terminology are critical to user trust </li>
+                                <li>Arabic support requires RTL (right-to-left) layout and early design consideration</li>
+                                  <li>Prototype must be demo-ready, not production-ready, requiring prioritisation </li>
+                                  <li>Tight timeline demands agile collaboration with weekly stakeholder reviews</li>
+
+                            </ul>
+                              </div>
+                          </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+
+
+
+                    <!-- Wireframes Section -->
+                    <div class="wave"></div>
+                    <section id="wireframe" class="skills light-bg ">
+
+                        <div class="container reveal">
+                            <h2 class="section-title">Design Strategy</h2>
+                            <p class="section-subtitle">
+                              Our design approach focused on simplifying complex healthcare data while maintaining accuracy and supporting bilingual workflows.</p>
+                      <div class="impact-stats">
+                                <div class="skill-category">
+                                    <div class="skill-icon"><i class="ri-ball-pen-line ri-2x"></i></div>
+                                    <h3 class="skill-title">Clarity Over Aesthetics</h3>
+                                    <p>Every design decision prioritises clear communication of medical information and user confidence.</p>
+                                </div>
+                                <div class="skill-category">
+                                  <div class="skill-icon"><i class="ri-file-copy-2-line ri-2x"></i></div>
+                                    <h3 class="skill-title">Progressive Disclosure</h3>
+                                    <p>Present essential information first, with drill-down access to detailed data to avoid cognitive overload.</p>
+                                </div>
+
+                                <div class="skill-category">
+                                  <div class="skill-icon"><i class="ri-line-height ri-2x"></i></div>
+                                  <h3 class="skill-title">Modular &amp; Scalable</h3>
+                                <p>Consistent component patterns across Encounters, Labs, Medications, and other medical record sections.</p>
+                                    </div>
+                                    <div class="skill-category">
+                                      <div class="skill-icon"><i class="ri-file-list-3-line ri-2x"></i></div>
+                                      <h3 class="skill-title">Bilingual Ready</h3>
+                                    <p>All screens designed with RTL support from the start-not as an afterthought.</p>
+                                        </div>
+                                      </div>
+
+                    </div>
+                    </div>
+
+                        </div>
+                    </section>
+
+                    <!--Visual Design Section -->
+
+                    <section id="visual" class="skills">
+
+
+                        <div class="container reveal">
+                            <h2 class="section-title">Information Architecture</h2>
+
+                            <div class="container">
+                      <img src="img/ehr-flow.png" class="" alt="" loading="lazy"></div>
+                    </section>
+
+                      <!--Visual Design Section -->
+
+                      <section id="visual" class="skills">
+                        <div class="container reveal">
+                          <h2 class="section-title">Key Design Elements</h2>
+                          <div class="impact-stats">
+                                    <div class="skill-category">
+                                        <div class="skill-icon"><i class="ri-ball-pen-line ri-2x"></i></div>
+                                        <h3 class="skill-title">Card-Based Layout</h3>
+                                        <p>Each medical record presented as a scannable card with essential info and drill-down access</p>
+                                    </div>
+                                    <div class="skill-category">
+                                      <div class="skill-icon"><i class="ri-file-copy-2-line ri-2x"></i></div>
+                                        <h3 class="skill-title">Clear Visual Hierarchy</h3>
+                                        <p>Consistent use of size, colour, spacing to guide attention to key information</p>
+                                    </div>
+
+                                    <div class="skill-category">
+                                      <div class="skill-icon"><i class="ri-line-height ri-2x"></i></div>
+                                      <h3 class="skill-title">Empty States &amp; Guidance</h3>
+                                    <p>Thoughtfully designed empty states to reassure users and provide next steps</p>
+                                        </div>
+                                        <div class="skill-category">
+                                          <div class="skill-icon"><i class="ri-file-list-3-line ri-2x"></i></div>
+                                          <h3 class="skill-title">RTL Support</h3>
+                                        <p>All UI components mirrored for Arabic—buttons, icons, navigation—without compromising the English experience</p>
+                                            </div>
+                                          </div>
+
+                      <div style="padding:6em 0 0 0;">
+                        <h2 class="section-title">Mobile App Design</h2>
+                        <p class="section-subtitle">
+                              Onborading : Splash, language selection, login
+                            </p>
+                            <img src="img/ehr-v1.jpg" class="full-width-image" alt="" loading="lazy">
+                             </div>
+
+                             <div style="padding:3em 0 0 0;">
+                               <h3 class="section-subtitle" >
+                                     Onborading : Splash, language selection, login
+                                   </h3>
+                                   <img src="img/ehr-v2.jpg" class="full-width-image" alt="" loading="lazy">
+                                    </div>
+                                    <div style="padding:3em 0 0 0;">
+                                               <h3 class="section-subtitle" >
+                                                     History, filters, search
+                                                   </h3>
+                                                   <img src="img/ehr-v3.jpg" class="full-width-image" alt="" loading="lazy">
+                                                    </div>
+
+                                                    <div style="padding:3em 0 0 0;">
+                                                      <h3 class="section-subtitle" >
+                                                            Health Library, Conditions &amp; Allergies
+                                                          </h3>
+                                                          <img src="img/ehr-v4.jpg" class="full-width-image" alt="" loading="lazy">
+                                                           </div>
+                                                           <div style="padding:3em 0 0 0;">
+                                                             <h3 class="section-subtitle" >
+                                                                Procedures &amp; Documents
+                                                                 </h3>
+                                                                 <img src="img/ehr-v5.jpg" class="full-width-image" alt="" loading="lazy">
+                                                                  </div>
+                                                                  <div style="padding:3em 0 0 0;">
+                                                                    <h3 class="section-subtitle" >
+                                                                       Lab Results
+                                                                        </h3>
+                                                                        <img src="img/ehr-v6.jpg" class="full-width-image" alt="" loading="lazy">
+                                                                         </div>
+                                                                         <div style="padding:3em 0 0 0;">
+                                                                           <h3 class="section-subtitle" >
+                                                                              Medications &amp; Settings
+                                                                               </h3>
+                                                                               <img src="img/ehr-v7.jpg" class="full-width-image" alt="" loading="lazy">
+                                                                                </div>
+
+
+
+
+
+
+
+
+                    </div>
+                    </div>
+                      </div>
+
+                        </div>
+                    </section>
+
+
+                    <!--Visual Design Section -->
+
+                    <section id="visual" class="skills">
+
+
+                        <div class="container reveal">
+                            <h2 class="section-title">Desktop Application</h2>
+
+                            <div style="padding:3em 0 0 0;">
+                              <h3 class="section-subtitle" >
+                                    Desktop &amp; Health Records
+                                  </h3>
+                                  <img src="img/ehr-d1.jpg" class="full-width-image" alt="" loading="lazy">
+                                   </div>
+                                   <div style="padding:3em 0 0 0;">
+                                     <h3 class="section-subtitle" >
+                                           Appointments &amp; Medications
+                                         </h3>
+                                         <img src="img/ehr-d2.jpg" class="full-width-image" alt="" loading="lazy">
+                                          </div>
+
+                                          <div style="padding:3em 0 0 0;">
+                                            <h3 class="section-subtitle" >
+                                                  Circle of Care &amp; Shared Files
+                                                </h3>
+                                                <img src="img/ehr-d3.jpg" class="full-width-image" alt="" loading="lazy">
+                                                 </div>
+
+                                                 <div style="padding:3em 0 0 0;">
+                                                   <h3 class="section-subtitle" >
+                                                         Health Library &amp; Forms and Assessments
+                                                       </h3>
+                                                       <img src="img/ehr-d4.jpg" class="full-width-image" alt="" loading="lazy">
+                                                        </div>
+
+                                                        <div style="padding:3em 0 0 0;">
+                                                          <h3 class="section-subtitle" >
+                                                                Goals &amp; Data Tracking
+                                                              </h3>
+                                                              <img src="img/ehr-d5.jpg" class="full-width-image" alt="" loading="lazy">
+                                                               </div>
+
+                                                               <div style="padding:3em 0 0 0;">
+                                                                 <h3 class="section-subtitle" >
+                                                                       Profile &amp; Settings
+                                                                     </h3>
+                                                                     <img src="img/ehr-d6.jpg" class="full-width-image" alt="" loading="lazy">
+                                                                      </div>
+
+
+
+
+
+                    </section>
+
+
+
+                    <!-- Impact Section -->
+                        <section class="impact">
+                            <div class="container reveal">
+
+                                <h2 class="section-title">Results &amp; Impact</h2>
+                                <p class="section-subtitle">We validated the design through internal walkthroughs and scenario-based testing with stakeholders. What we achieved and what we learned from the process.</p>
+                                <div class="impact-stats">
+                                  <div class="impact-stat">
+                                    <div class="">Demo-Ready</div>
+                                      <div class="impact-label">Delivered high-quality prototype on time for Arab Health conference</div>
+                                  </div>
+                                  <div class="impact-stat">
+                                    <div class="">Bilingual</div>
+                                      <div class="impact-label">Created English/Arabic interface with proper RTL support</div>
+                                  </div>
+                                  <div class="impact-stat">
+                                    <div class="">User-Approved</div>
+                                      <div class="impact-label">Stakeholder validation and buy-in for future development</div>
+                                  </div>
+                                  <div class="impact-stat">
+                                    <div class="">Foundation Built</div>
+                                      <div class="impact-label">Established design patterns for healthcare app ecosystem</div>
+                                  </div>
+
+
+                                </div>
+
+                            </div>
+                        </section>
+
+
+          <!-- Contact Section -->
+          <section id="contact" class="contact">
+              <div class="container reveal">
+                  <h2 class="section-title">Let's Work Together</h2>
+                  <p class="section-subtitle">
+                      I'm always interested in discussing new opportunities, collaborating on
+                      exciting projects, or simply sharing ideas about design.
+                  </p>
+                  <div class="contact-options">
+                      <div class="contact-card">
+                          <div class="contact-icon">💬</div>
+                          <h3 class="contact-title">Start A Conversation</h3>
+                          <p class="contact-description">
+                              Ready to elevate your digital experiences? Let's discuss your project and explore
+                              how we can work together.
+                          </p>
+                          <a href="mailto:kapilrajput@gmail.com" class="btn btn-primary">Schedule a Call</a>
+                      </div>
+                      <div class="contact-card">
+                          <div class="contact-icon">✉️</div>
+                          <h3 class="contact-title">Send an Email</h3>
+                          <p class="contact-description">
+                              Prefer email? Drop me a line and I'll get back to you within 24 hours. I'd love to
+                              hear about your project.
+                          </p>
+                          <a href="mailto:kapilrajput@gmail.com" class="btn btn-primary">Send Email</a>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+
+      <!-- Footer -->
+      <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#work">Work</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div>
+                        <p style="color: rgba(255, 255, 255, 0.5); font-size: 14px;">
+                            © 2024 Kapil Kumar Singh. All rights reserved.
+                        </p>
+                    </div>
+                    </div></div></footer>
+
+                    <script>
+
+
+                        function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal, {passive: true});
+                    </script>
+                    <script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+                  </body>
+</html>
